@@ -29,5 +29,15 @@
 		<servlet-name>Login</servlet-name>
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ListView</servlet-name>
+		<servlet-class>com.realstate.servlets.ListPropertyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ListView</servlet-name>
+		<url-pattern>/goToDetails</url-pattern>
+	</servlet-mapping>
 
 </web-app>

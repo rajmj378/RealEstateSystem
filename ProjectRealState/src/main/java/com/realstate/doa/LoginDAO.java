@@ -29,6 +29,7 @@ public class LoginDAO extends DAObase {
 			p= new Owner();
 		}
 		if (user.equals(pass)) {
+			p.setName(user);
 			return p;
 		}
 		return null;

@@ -16,11 +16,11 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		Login login = new Login();
-		boolean loginOk = false;
 		Person p= login.doLogin(req.getParameter("un"), req.getParameter("pw"),req.getParameter("rad"));
 		
 		if (p!=null) {
-			req.setAttribute("user", p);
+			req.getSession().setAttribute("user", p);
+		
 			if (req.getParameter("rad").equals("client")) {
 				resp.sendRedirect("client.jsp");
 			}
