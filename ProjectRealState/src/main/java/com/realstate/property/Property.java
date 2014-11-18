@@ -6,6 +6,13 @@ public class Property {
 	String address;
 	int numberOfRooms;
 	double price;
+	String propertyType;
+	public String getPropertyType() {
+		return propertyType;
+	}
+	public void setPropertyType(String propertyType) {
+		this.propertyType = propertyType;
+	}
 	public int getId() {
 		return id;
 	}
