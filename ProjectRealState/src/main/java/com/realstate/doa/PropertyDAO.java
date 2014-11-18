@@ -5,10 +5,11 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.realstate.property.Property;
+import com.sun.org.apache.regexp.internal.recompile;
 
 public class PropertyDAO extends ClientDAO{
 
-	public void getAllPerson(){
+	public List<Property> getAllProperties(){
 		List<Property> properties = null;
 		ResultSet rs = this.exec("Select * from property");
 		  try {
@@ -33,6 +34,6 @@ public class PropertyDAO extends ClientDAO{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		return properties;
 	}
 }
