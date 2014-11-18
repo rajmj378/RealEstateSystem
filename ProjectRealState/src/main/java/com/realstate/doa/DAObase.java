@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 import javax.sql.DataSource;
 
-public class DOAbase {
+public class DAObase {
 	private DataSource dataSource;
 
 	public DataSource getDataSource() {

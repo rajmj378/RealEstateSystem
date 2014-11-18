@@ -40,7 +40,7 @@
 					<scanIntervalSeconds>0</scanIntervalSeconds>
 					<reload>manual</reload>
 					<webApp>
-						<contextPath>/realState</contextPath>
+						<contextPath>/</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>

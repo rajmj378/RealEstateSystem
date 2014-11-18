@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 
 
 
-public class ClientDAO extends DOAbase {
+public class ClientDAO extends DAObase {
 	public void findAll() {
 		ResultSet rs=exec("");
 	}
