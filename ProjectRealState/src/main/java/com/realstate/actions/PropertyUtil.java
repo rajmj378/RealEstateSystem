@@ -11,5 +11,9 @@ public class PropertyUtil {
 	public List<Property> getAllProperties() {
 		return new PropertyDAO().getAllProperties();
 	}
+	
+	public Property getPropertieById(int id) {
+		return new PropertyDAO().getPropertyObject(id);
+	}
 
 }

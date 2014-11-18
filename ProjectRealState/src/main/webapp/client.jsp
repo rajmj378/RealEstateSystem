@@ -29,8 +29,7 @@
 			<td><%=p.getPrice()%></td>
 			<td>
 				<%
-					out.println("<a href='goToDetails?id=" + p.getId() + "&user="
-								+ ((Person)session.getAttribute("user")).getName()+ "'>rent</a>");
+					out.println("<a href='goToDetails?id=" + p.getId() + "'>rent</a>");
 				
 				%>
 			</td>
