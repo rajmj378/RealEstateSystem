@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.realstate.actions.Login;
+import com.realstate.person.Person;
 
 public class LoginServlet extends HttpServlet {
 
@@ -16,11 +17,10 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		Login login = new Login();
 		boolean loginOk = false;
-		if (login.doLogin(req.getParameter("un"), req.getParameter("pw"))) {
-			loginOk = true;
-		}
-		if (loginOk) {
-			req.getSession().setAttribute("user", req.getParameter("un"));
+		Person p= login.doLogin(req.getParameter("un"), req.getParameter("pw"),req.getParameter("rad"));
+		
+		if (p!=null) {
+			req.setAttribute("user", p);
 			if (req.getParameter("rad").equals("client")) {
 				resp.sendRedirect("client.jsp");
 			}
