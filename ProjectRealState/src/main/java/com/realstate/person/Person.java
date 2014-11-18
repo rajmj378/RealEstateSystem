@@ -2,6 +2,7 @@ package com.realstate.person;
 
 public class Person{
 
+	private int id;
 	private String name;
 	private String address;
 	private String phone;
@@ -9,6 +10,15 @@ public class Person{
 	
 	public Person() {
 		
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	public void setName(String name) {
