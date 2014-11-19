@@ -8,6 +8,14 @@ public class Property {
 	double price;
 	String propertyType;
 	
+	public Property()
+	{
+		
+	}
+	public Property(int id)
+	{
+		this.id=id;
+	}
 	public String getPropertyType() {
 		return propertyType;
 	}

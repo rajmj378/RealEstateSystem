@@ -14,7 +14,8 @@
 	Property property=new PropertyUtil().getPropertyFromId(propertyId);
 	if(property!=null) {	
 %>
-<div><h2>The detail of the property you wish to order:</h2></div>
+<div>
+<h2>The detail of the property you wish to order:</h2></div>
 		<table cellpadding="5px" cellspacing="2px">
 			<tr>
 				<td>Property Type</td>
@@ -50,18 +51,19 @@
 			</table>
 			<%}%>
 
-			<table cellpadding="5px">
+	<form action="viewServlet" method="post">
+				<table cellpadding="5px">
 				<tr>
 					<td><%=((Person)request.getSession().getAttribute("user")).getName()%>
 					</td>
-					<td><Textarea cols="100" rows="6"> </Textarea></td>
+					<td><Textarea cols="100" rows="6" name="comment"> </Textarea></td>
 				</tr>
-			<tr><td></td>
-			<td>
-			<form action="viewServlet" method="post">
-				<input type="submit" value="Comment">
-			</form></td>
+				</table>		
+				<input name="id" type="hidden" value="<%=request.getParameter("id")%>"/>
+				<input type="submit" value="Comment">				
+			</form>
 			</table>
 	</div>
+
 </body>
 </html>

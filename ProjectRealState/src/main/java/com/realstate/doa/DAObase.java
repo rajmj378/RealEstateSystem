@@ -28,5 +28,15 @@ public class DAObase {
 		}
 		return rs;
 	}
+	
+	public void execInsert(String sql) {
+		Statement st = null;
+		try {
+			st = getDataSource().getConnection().createStatement();
+			st.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 
 }
