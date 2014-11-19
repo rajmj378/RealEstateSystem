@@ -24,7 +24,7 @@ public class PropertyDAO extends ClientDAO {
 							.getString("noOfRooms")));
 					p.setPrice(Double.parseDouble(rs.getString("price")));
 					p.setPropertyType(rs.getString("isHouse").toLowerCase()
-							.equals("true") ? "house" : "apt");
+							.equals("1") ? "house" : "apt");
 					properties.add(p);
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
