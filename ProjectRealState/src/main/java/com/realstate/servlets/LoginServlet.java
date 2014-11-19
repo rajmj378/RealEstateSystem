@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 				resp.sendRedirect("admin.jsp");
 			}
 			if (req.getParameter("rad").equals("employee")) {
-				resp.sendRedirect("admin.jsp");
+				resp.sendRedirect("employee.jsp");
 			}
 		}
 		else{

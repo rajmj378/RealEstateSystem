@@ -8,7 +8,7 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost/realstate" />
 		<property name="username" value="root" />
-		<property name="password" value="p@ss" />
+		<property name="password" value="root" />
 	</bean>
 	<bean id="templete" class="com.realstate.doa.DAObase">
 		<property name="dataSource" ref="mytemplete" />
