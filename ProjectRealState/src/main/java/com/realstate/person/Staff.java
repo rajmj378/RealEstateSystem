@@ -10,7 +10,6 @@ public class Staff extends Person{
 	
 	public Staff() {
 		
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void setProperties(Property p){

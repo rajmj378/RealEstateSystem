@@ -1,7 +1,7 @@
+<%@page import="com.realstate.actions.PropertyUtil"%>
 <%@page import="com.realstate.person.Person"%>
 <%@page import="com.realstate.property.Apartment"%>
 <%@page import="com.sun.org.apache.bcel.internal.generic.INSTANCEOF"%>
-<%@page import="com.realstate.actions.ProperyUtil"%>
 <%@page import="java.util.LinkedList"%>
 <%@page import="com.realstate.property.Property"%>
 <%@page import="java.util.List"%>
@@ -9,7 +9,7 @@
 <body>
 	<h2>
 		Hello Client
-		<%=((Person)session.getAttribute("user")).getName()%></h2>
+		<%=((Person) session.getAttribute("user")).getName()%></h2>
 	<table>
 		<tr>
 			<td>name</td>
@@ -18,19 +18,17 @@
 			<td>Buy/rent</td>
 		</tr>
 		<%
-			List<Property> properties = new ProperyUtil().getAllProperties();
+			List<Property> properties = new PropertyUtil().getAllProperties();
 			for (Property p : properties) {
 		%>
 
 		<tr>
-		
-			<td><%=p.getPrice()%></td>
-			<td><%=p.getPrice()%></td>
+
+			<td><%=p.getId()%></td>
+			<td><%=p.getPropertyType()%></td>
 			<td><%=p.getPrice()%></td>
 			<td>
 				<%
-					out.println("<a href='goToDetails?id=" + p.getId() + "'>rent</a>");
-				
 				%>
 			</td>
 		</tr>
