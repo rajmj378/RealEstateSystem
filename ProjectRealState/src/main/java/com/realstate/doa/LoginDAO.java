@@ -27,7 +27,7 @@ public class LoginDAO extends DAObase {
 		if (role.equals("employee")) {
 			type = 2;
 			personType="staff";
-			p = new Client();
+			p = new Staff();
 		}
 		if (role.equals("admin")) {
 			type = 3;

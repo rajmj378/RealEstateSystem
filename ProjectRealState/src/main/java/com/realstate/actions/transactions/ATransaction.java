@@ -7,14 +7,23 @@ import com.realstate.person.Owner;
 
 import com.realstate.property.Property;
 
-public abstract class ATransaction implements ITransaction {
+public class ATransaction implements ITransaction {
 
 	private Date transactionDate;
 	private Property property;
 	private Owner owner;
 	private Client client;
+	private String type;
 	
 	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	public Owner getOwner() {
 		return owner;
 	}

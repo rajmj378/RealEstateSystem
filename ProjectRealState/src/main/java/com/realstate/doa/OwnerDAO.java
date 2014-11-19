@@ -3,20 +3,14 @@ package com.realstate.doa;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.realstate.person.Owner;;
 
-import com.realstate.person.Client;
-import com.realstate.property.Property;
+public class OwnerDAO extends DAObase{
 
-
-
-public class ClientDAO extends DAObase {
-	public void findAll() {
-		ResultSet rs=exec("");
-	}
-	
-	public Client getClientObject(int clientId) {
-		Client per = new Client();
-		String query = "Select p.id as id,p.address as address,p.name as name from person p join client o on o.personID=p.id where o.id =" + clientId;
+	public Owner getOwnerObject(int ownerId) {
+		Owner per = new Owner();
+		String query = "Select p.id as id,p.address as address,p.name as name from person p join owner o on o.personID=p.id where o.id =" + ownerId;
+		
 		ResultSet rs = this.exec(query);
 		try {
 			while (rs.next()) {
@@ -31,7 +25,6 @@ public class ClientDAO extends DAObase {
 			e.printStackTrace();
 		}
 
-		System.out.println(per);
 		return per;
 	}
 }
