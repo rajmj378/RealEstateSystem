@@ -20,7 +20,6 @@ public class LoginDAO extends DAObase {
 		String sql = "select * from person where Upper(name) ='"
 				+ user.toUpperCase() + "' and password='" + pass + "'";
 		ResultSet rs = exec(sql);
-		System.out.println(rs);
 		if (role.equals("client")) {
 			type = 1;
 			p = new Client();
@@ -37,9 +36,9 @@ public class LoginDAO extends DAObase {
 		try {
 			while (rs.next()) {
 				sucess = true;
-				p.setId(rs.getInt(0));
-				p.setName(rs.getString(1));
-				p.setAddress(rs.getString(2));
+				p.setId(rs.getInt("id"));
+				p.setName(user);
+				p.setAddress(rs.getString("address"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
