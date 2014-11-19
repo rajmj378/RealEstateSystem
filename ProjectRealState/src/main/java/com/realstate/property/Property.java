@@ -7,6 +7,7 @@ public class Property {
 	int numberOfRooms;
 	double price;
 	String propertyType;
+	boolean isForSale;
 	
 	public String getPropertyType() {
 		return propertyType;
