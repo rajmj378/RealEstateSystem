@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.realstate.actions.Login;
 import com.realstate.actions.ViewService;
 import com.realstate.view.View;
 
@@ -22,5 +21,6 @@ public class ViewServlet extends HttpServlet {
 		view.setViewDate(new Date());
 		ViewService viewService =new ViewService();
 		viewService.insertComment(view);
+		resp.sendRedirect("propertyDetail.jsp");		
 	}
 }
