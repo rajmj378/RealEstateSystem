@@ -7,6 +7,7 @@ public class Property {
 	int numberOfRooms;
 	double price;
 	String propertyType;
+	
 	public String getPropertyType() {
 		return propertyType;
 	}
