@@ -7,7 +7,7 @@ import java.sql.Statement;
 import javax.sql.DataSource;
 
 public class DAObase {
-	private DataSource dataSource;
+	private static DataSource dataSource;
 
 	public DataSource getDataSource() {
 		return dataSource;
