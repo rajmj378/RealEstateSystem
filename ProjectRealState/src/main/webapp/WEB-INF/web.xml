@@ -39,5 +39,13 @@
 		<servlet-name>ListView</servlet-name>
 		<url-pattern>/goToDetails</url-pattern>
 	</servlet-mapping>
+<servlet>
+		<servlet-name>Buy</servlet-name>
+		<servlet-class>com.realstate.servlets.BuyServlet</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>Buy</servlet-name>
+		<url-pattern>/buy</url-pattern>
+	</servlet-mapping>
 </web-app>

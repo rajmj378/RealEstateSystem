@@ -1,4 +1,3 @@
-
 package com.realstate.doa;
 
 import java.sql.ResultSet;
@@ -11,7 +10,8 @@ public class PropertyDAO extends ClientDAO {
 
 	public List<Property> getAllProperties() {
 		List<Property> properties = new LinkedList<Property>();
-		ResultSet rs = this.exec("Select * from property where is_for_sale=TRUE");
+		ResultSet rs = this
+				.exec("Select * from property where is_for_sale=TRUE");
 		try {
 			while (rs.next()) {
 				Property p = new Property();
@@ -48,8 +48,7 @@ public class PropertyDAO extends ClientDAO {
 			while (rs.next()) {
 				per.setId(Integer.parseInt(rs.getString("id")));
 				per.setAddress(rs.getString("address"));
-				per.setNumberOfRooms(Integer.parseInt(rs
-						.getString("noOfRooms")));
+				per.setNumberOfRooms(Integer.parseInt(rs.getString("noOfRooms")));
 				per.setPrice(Double.parseDouble(rs.getString("price")));
 				per.setPropertyType(rs.getString("isHouse").toLowerCase()
 						.equals("1") ? "house" : "apt");
@@ -62,6 +61,14 @@ public class PropertyDAO extends ClientDAO {
 
 		return per;
 	}
+
+	public void insert(int propId, int pid) {
+		DAObase db = new DAObase();
+		String que = "UPDATE property SET is_for_sale=0 where ID=" + propId;
+		System.out.println(que);
+		db.execInsert(que);
+		String query = "insert into transaction(clientID,propertyID,type) values("
+				+ pid + "," + propId + ",'sell'"+")";
+		db.execInsert(query);
+	}
 }
-
-

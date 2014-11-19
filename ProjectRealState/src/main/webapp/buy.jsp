@@ -9,13 +9,8 @@
 <body>
 <div style="margin-top: 100px;">
 	<h2>Buy Property?<h2>
-	<form action="viewServlet" method="post">
-			<table cellpadding="5px">
-				<tr>
-					<td>Amount you want to Deposit ($) ?</td>
-					<td><input type="text" name="depositAmount"/></td>
-				</tr>
-			</table>
+	<form action="buy" method="post">
+			
 			<h3>Lease Terms</h3>
 			<p>Copyright 2004 The Apache Software Foundation
 
