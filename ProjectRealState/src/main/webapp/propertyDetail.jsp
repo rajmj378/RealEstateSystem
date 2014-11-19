@@ -14,7 +14,8 @@
 	Property property=new PropertyUtil().getPropertyFromId(propertyId);
 	if(property!=null) {	
 %>
-		<table>
+<div><h2>The detail of the property you wish to order:</h2></div>
+		<table cellpadding="5px" cellspacing="2px">
 			<tr>
 				<td>Property Type</td>
 				<td><%= property.getPropertyType() %></td>
@@ -33,12 +34,13 @@
 		</form>
 		<%} %>
 	</div>
+	<div style="margin-top: 100px;">
 	<h2>Comments<h2>
 <%
 	List<View> viewList=new ViewService().getViewForProperty(propertyId);
 	if(viewList!=null) {
 %>
-			<table>
+			<table cellspacing="5px" cellpadding="5px ">
 				<% for(View v : viewList){ %>
 				<tr>
 					<td><%= v.getClient().getName() %></td>
@@ -48,15 +50,18 @@
 			</table>
 			<%}%>
 
-			<table>
+			<table cellpadding="5px">
 				<tr>
 					<td><%=((Person)request.getSession().getAttribute("user")).getName()%>
 					</td>
-					<td><Textarea> </Textarea></td>
+					<td><Textarea cols="100" rows="6"> </Textarea></td>
 				</tr>
-			</table>
+			<tr><td></td>
+			<td>
 			<form action="viewServlet" method="post">
 				<input type="submit" value="Comment">
-			</form>
+			</form></td>
+			</table>
+	</div>
 </body>
 </html>
