@@ -30,7 +30,7 @@
 			<td><%=p.getPropertyType()%></td>
 			<td><%=p.getPrice()%></td>
 			<td>		
-			<%out.println("<a href='propertyDetail.jsp?id=" + p.getId() + "'>rent</a>");%>
+			<%out.println("<a href='propertyDetail.jsp?id=" + p.getId() + "'>View</a>");%>
 			</td>
 		</tr>
 		<%

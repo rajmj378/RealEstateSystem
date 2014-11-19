@@ -52,7 +52,7 @@ public class PropertyDAO extends ClientDAO {
 						.getString("noOfRooms")));
 				per.setPrice(Double.parseDouble(rs.getString("price")));
 				per.setPropertyType(rs.getString("isHouse").toLowerCase()
-						.equals("true") ? "house" : "apt");
+						.equals("1") ? "house" : "apt");
 			}
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
