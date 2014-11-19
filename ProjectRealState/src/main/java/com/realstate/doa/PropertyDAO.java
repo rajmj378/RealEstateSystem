@@ -11,7 +11,7 @@ public class PropertyDAO extends ClientDAO {
 
 	public List<Property> getAllProperties() {
 		List<Property> properties = new LinkedList<Property>();
-		ResultSet rs = this.exec("Select * from property");
+		ResultSet rs = this.exec("Select * from property where is_for_sale=TRUE");
 		try {
 			while (rs.next()) {
 				Property p = new Property();
