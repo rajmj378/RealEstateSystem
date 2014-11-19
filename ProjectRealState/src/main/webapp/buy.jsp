@@ -36,7 +36,7 @@
   			
   				<BR>	
 				<input name="id" type="hidden" value="<%=request.getParameter("id")%>"/>
-				<input type="submit" value="Rent">				
+				<input type="submit" value="Buy">				
 	</form>
 </div>
 
