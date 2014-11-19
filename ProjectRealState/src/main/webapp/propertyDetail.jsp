@@ -37,13 +37,15 @@
 			if (new PropertyUtil().getPropertyFromId(propertyId)
 						.getPropertyType().equals("apt")) {
 		%>
-		<form action="login" method="post">
+		<form action="rent.jsp" method="post">
+			<input type="hidden" value=<%=propertyId%> name="propertyId">
 			<input type="submit" value="Rent">
 		</form>
 		<%
 			} else {
 		%>
-		<form action="login" method="post">
+		<form action="buy.jsp" method="post">
+			<input type="hidden" value=<%=propertyId%> name="propertyId">
 			<input type="submit" value="Buy">
 		</form>
 
