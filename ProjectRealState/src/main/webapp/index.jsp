@@ -1,19 +1,28 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<div style="margin-left: 30%;margin-top: 10%;border: solid;border-color: purple;border-width: 2px;width: 35%">
+<h2>Real State Login System</h2>
 
 <form action="login" method="post">
 
-			Please enter your username 		
-			<input type="text" name="un"/><br>		
-		
-			Please enter your password
-			<input type="text" name="pw"/>
-			Please select type</br>
-			<input type="radio" name="rad" value="client"/> Client</br>
-			<input type="radio" name="rad" value="employee"/> Employee</br>
-			<input type="radio" name="rad" value="admin"/> Admin</br>
-			<input type="submit" value="submit">			
+<table>
+<tr>
+	<td>Please enter your username</td> 		
+	<td><input type="text" name="un"/></tr>
+</tr>		
+<tr>	
+			<td>Please enter your password</td>
+			<td><input type="password" name="pw"/></td>
+</tr>
+			<td>Please select type</td>
+			<td><input type="radio" name="rad" value="client" checked="checked"/> Client
+			<input type="radio" name="rad" value="employee"/> Employee
+			<input type="radio" name="rad" value="admin"/> Admin 
+			</td>
+			<tr>
+			<td></td><td><input type="submit" value="submit"></td>
+</table>			
 		</form>
+</div>
 </body>
 </html>
