@@ -8,9 +8,9 @@
 			<input type="text" name="un"/><br>		
 		
 			Please enter your password
-			<input type="text" name="pw"/>
+			<input type="password" name="pw"/>
 			Please select type</br>
-			<input type="radio" name="rad" value="client"/> Client</br>
+			<input type="radio" name="rad" value="client" checked="checked"/> Client</br>
 			<input type="radio" name="rad" value="employee"/> Employee</br>
 			<input type="radio" name="rad" value="admin"/> Admin</br>
 			<input type="submit" value="submit">			
