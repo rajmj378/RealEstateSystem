@@ -38,14 +38,14 @@
 						.getPropertyType().equals("apt")) {
 		%>
 		<form action="rent.jsp" method="post">
-			<input type="hidden" value=<%=propertyId%> name="propertyId">
+			<input type="hidden" value=<%=propertyId%> name="id">
 			<input type="submit" value="Rent">
 		</form>
 		<%
 			} else {
 		%>
 		<form action="buy.jsp" method="post">
-			<input type="hidden" value=<%=propertyId%> name="propertyId">
+			<input type="hidden" value=<%=propertyId%> name="id">
 			<input type="submit" value="Buy">
 		</form>
 
