@@ -1,6 +1,6 @@
 <html>
 <body>
-<div style="margin-left: 30%;margin-top: 10%">
+<div style="margin-left: 30%;margin-top: 10%;border: solid;border-color: purple;border-width: 2px;width: 35%">
 <h2>Real State Login System</h2>
 
 <form action="login" method="post">
