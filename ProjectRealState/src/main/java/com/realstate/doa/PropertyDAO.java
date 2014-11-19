@@ -43,7 +43,8 @@ public class PropertyDAO extends ClientDAO {
 
 	public Property getPropertyObject(int propertyId) {
 		Property per = new Property();
-		String query = "Select * from property where id " + propertyId;
+		String query = "Select * from property where id =" + propertyId;
+		System.out.println(query);
 		ResultSet rs = this.exec(query);
 		try {
 			while (rs.next()) {

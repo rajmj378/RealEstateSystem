@@ -22,7 +22,7 @@ public class ListPropertyServlet extends HttpServlet {
 		PropertyUtil util = new PropertyUtil();
 		Property property = util.getPropertieById(Integer.parseInt(propId));
 		req.setAttribute("property", property);
-		req.getRequestDispatcher("/propertyDetails.jsp").forward(req, resp);
+		req.getRequestDispatcher("/propertyDetail.jsp").forward(req, resp);
 
 	}
 }

@@ -29,6 +29,9 @@
 			<td><%=p.getPrice()%></td>
 			<td>
 				<%
+							out.println("<a href='goToDetails?id="
+									+ p.getId() + "'>view</a>");
+						
 				%>
 			</td>
 		</tr>
