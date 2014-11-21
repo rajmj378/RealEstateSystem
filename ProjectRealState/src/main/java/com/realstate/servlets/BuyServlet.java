@@ -26,12 +26,13 @@ public class BuyServlet extends HttpServlet {
 		
 		 PropertyDAO pd = new PropertyDAO();
 		 pd.insert(propId, pid);
+		 req.getRequestDispatcher("/client.jsp").forward(req, resp);	
 		
-		
-		PrintWriter out=resp.getWriter();
-				out.println("Congrats!!! you Have started the Buying process. Please Wait for our sales force to contact you. <a href='client.jsp'>"
-						+ "Click to view more property"
-						+ "<\\a>");
+//		PrintWriter out=resp.getWriter();
+//				out.println("Congrats!!! you Have started the Buying process. Please Wait for our sales force to contact you. <a href='client.jsp'>"
+//						+ "Click to view more property"
+//						+ "<\\a>");
+				
 		
 	}
 }

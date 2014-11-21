@@ -4,6 +4,7 @@ package com.realstate.actions;
 import java.util.List;
 
 import com.realstate.doa.PropertyDAO;
+import com.realstate.person.Owner;
 import com.realstate.property.Property;
 
 public class PropertyUtil {
@@ -20,5 +21,5 @@ public class PropertyUtil {
 	{
 		return propertyDao.getPropertyObject(propertyId);
 	}
-
+	
 }

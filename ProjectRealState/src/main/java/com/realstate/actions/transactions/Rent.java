@@ -3,15 +3,16 @@ package com.realstate.actions.transactions;
 import java.util.Date;
 
 public class Rent extends ATransaction {
-	private boolean leaseSigned;
+	private int leaseSigned;
 	private double depositPaid;
 	private Date rentStartDate;
 	private Date rentEndDate;
 	private double rent;
-	public boolean isLeaseSigned() {
+	
+	public int getLeaseSigned() {
 		return leaseSigned;
 	}
-	public void setLeaseSigned(boolean leaseSigned) {
+	public void setLeaseSigned(int leaseSigned) {
 		this.leaseSigned = leaseSigned;
 	}
 	public double getDepositPaid() {

@@ -39,13 +39,33 @@
 		<servlet-name>ListView</servlet-name>
 		<url-pattern>/goToDetails</url-pattern>
 	</servlet-mapping>
-<servlet>
-		<servlet-name>Buy</servlet-name>
+	<servlet>
+	<servlet-name>Buy</servlet-name>
 		<servlet-class>com.realstate.servlets.BuyServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Buy</servlet-name>
 		<url-pattern>/buy</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RentServlet</servlet-name>
+		<servlet-class>com.realstate.servlets.RentServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RentServlet</servlet-name>
+		<url-pattern>/rentServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ViewServlet</servlet-name>
+		<servlet-class>com.realstate.servlets.ViewServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ViewServlet</servlet-name>
+		<url-pattern>/viewServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

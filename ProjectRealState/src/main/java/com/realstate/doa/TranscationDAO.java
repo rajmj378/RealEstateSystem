@@ -33,8 +33,7 @@ public class TranscationDAO extends DAObase{
 					p.setOwner(new OwnerDAO().getOwnerObject(rs.getInt("ownerid")));
 					p.setProperty(new PropertyDAO().getPropertyObject(rs.getInt("propertyId")));
 					p.setType(rs.getString("type"));
-					p.setTransactionDate(new Date(rs.getDate("transactiondate").getTime()));
-					transactions.add(p);
+					p.setTransactionDate(rs.getDate("transactiondate") != null ? new Date(rs.getDate("transactiondate").getTime()):new Date());transactions.add(p);
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

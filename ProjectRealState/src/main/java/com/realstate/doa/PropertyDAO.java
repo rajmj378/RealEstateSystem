@@ -67,8 +67,8 @@ public class PropertyDAO extends ClientDAO {
 		String que = "UPDATE property SET is_for_sale=0 where ID=" + propId;
 		System.out.println(que);
 		db.execInsert(que);
-		String query = "insert into transaction(clientID,propertyID,type) values("
-				+ pid + "," + propId + ",'sell'"+")";
+		String query = "insert into transaction(clientID,propertyID,type,transactionDate) values("
+				+ pid + "," + propId + ",'sell',CURDATE()"+")";
 		db.execInsert(query);
 	}
 }
